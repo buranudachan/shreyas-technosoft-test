@@ -3,7 +3,6 @@ import { Modal } from "antd";
 
 
 const MovieDetail: React.FC<any> = (props) => {
-    console.log(props)
     return (
         <Modal
             title={props.title}

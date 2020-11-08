@@ -22,7 +22,6 @@ class AppComponent extends React.Component<any, any>{
       url: 'http://www.omdbapi.com/?i=tt3896198&apikey=6fa85bce'
     };
     const res: any = await serviceRequest.request(options);
-    console.log(res);
     if (res) {
       this.setState({
         movieDetail: [res.success.data]
@@ -32,8 +31,6 @@ class AppComponent extends React.Component<any, any>{
   }
   /**Open Modal for show moview detail */
   openModal(movieDescriptin: any) {
-
-    console.log('movieDescriptin', movieDescriptin);
     this.setState({
       isOpen: true,
       description: movieDescriptin
